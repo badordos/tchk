@@ -84,7 +84,7 @@ class TaskController extends Controller
      */
     public function getTask(int $id)
     {
-        return Task::where('id', $id)->first();
+        return $this->jsonResponse(Task::where('id', $id)->first());
     }
 
     /**
