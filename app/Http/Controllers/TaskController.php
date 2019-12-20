@@ -22,10 +22,7 @@ class TaskController extends Controller
      * TaskController constructor.
      */
     public function __construct()
-    {
-        if (empty(Task::all())) {
-            Artisan::call('migrate:fresh --seed');
-        }
+    {        
         $this->paginate = 10;
     }
 
